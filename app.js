@@ -1,7 +1,7 @@
 const layouts = require('express-ejs-layouts')
 const express = require('express'); 
 const app     = express(); 
-const port    = 3000; 
+const port    = process.env.PORT || 3000; 
 const morgan  = require('morgan'); 
 const session = require('express-session');
 const parsers = require('cookie-parser'); 
