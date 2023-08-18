@@ -1,6 +1,6 @@
 // npm i mongoose@5.12.13 
 const mongoose = require('mongoose'); 
-mongoose.connect('mongodb://127.0.0.1:27017/mydb', {
+mongoose.connect('mongodb+srv://mbimoad:<bimo1940>@cluster0.tgaekb9.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true, 
     useUnifiedTopology: true, 
     useCreateIndex: true,
