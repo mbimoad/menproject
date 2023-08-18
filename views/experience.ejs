@@ -1,0 +1,33 @@
+  <!--Banner Content-->
+  <%- include('./templates/loading.ejs') %>
+  <div id="skill-content" class="clearfix">
+    <div class="col-39">
+        <h1>Experience</h1>
+        <h2>Welcome to Experience showcasing my proficiency in web development. With a solid foundation in coding, a passion for problem-solving, and a dedication to creating user-friendly digital experiences, I'm excited to highlight the skills and experiences that make me a versatile and effective web developer.</h2>
+    </div>
+</div>
+
+<div class="experience-cards">
+    <div class="boxs">
+        <% data.forEach(item => { %>
+        <div class="box">
+            <div class="box-detail">
+                <span class="years">
+                    <%= new Date(item.datestart).toLocaleString('default', { month: 'long' }) %>
+                    <%= new Date(item.datestart).getFullYear() %> 
+                    - 
+                    <% if (item.is_present == 'on') { %>
+                     Present
+                    <% } else { %>
+                        <%= new Date(item.datefinish).toLocaleString('default', { month: 'long' }) %>
+                        <%= new Date(item.datefinish).getFullYear() %> 
+                    <% } %>
+                </span>
+                <span class="title"><%= item.judul %></span>
+                <span class="country"><%= item.posisi %></span>
+            </div>
+            <span><%= item.deskripsi %></span>
+        </div>
+        <% }) %>
+    </div>
+</div>

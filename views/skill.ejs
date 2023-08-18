@@ -1,0 +1,21 @@
+  <!--Banner Content-->
+  <%- include('./templates/loading.ejs') %>
+  <div id="skill-content" class="clearfix">
+    <div class="col-39">
+        <h1>SKILL</h1>
+        <h2>Welcome to Skill showcasing my proficiency in web development. With a solid foundation in coding, a passion for problem-solving, and a dedication to creating user-friendly digital experiences, I'm excited to highlight the skills and experiences that make me a versatile and effective web developer.</h2>
+    </div>
+</div>
+
+<div class="skill-cards">
+    <% data.forEach(item => { %>
+
+        <div class="box">
+            <i class="<%= item.classname %> fa-1x"></i>
+            <div class="box-detail">
+                <span class="title"><%= item.judul %></span>
+                <span class="descrip"><%= item.deskripsi %></span>
+            </div>
+        </div>
+    <% }) %>
+</div>

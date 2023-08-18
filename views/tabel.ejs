@@ -1,0 +1,59 @@
+
+<div id="skill-content" class="clearfix login">
+    <div class="col-39 mytable">
+        <h1>Title</h1>
+        <% if (typeof message != 'undefined') { %>
+            <h5><%= message %></h5>
+        <% } %>
+        <a class="add" href="<%= tambah %>">Tambah Data</a>
+        <div class="tables">
+            <table class="mytable">
+                <tr>
+                    <th>No</th>
+                    <% kolom.forEach(item => { %>
+                    <th><%= item %></th>
+                    <% }) %>
+                    <th>Action</th>
+                </tr>
+                
+                <% if (data == false) { %>
+                <tr>
+                    <td colspan="<%= kolom.length + 2%>">Data Kosong</td>
+                </tr>
+                <% } else { %>
+                    <%- data %>
+                <% } %>
+             </table>
+        </div>
+
+
+        <div class="pagination">
+            <!-- Pagination -->
+            <% if (aktif > 1) { %>
+                <a href="<%= pagelink %><%= aktif-1; %>">&laquo;</a>
+            <% } %>
+            <div class="page-number">
+                <% for( let i=1; i <=total; i++ ) { %>
+                    <% if (i == aktif) { %>
+                        <a href="<%= pagelink %><%= i %>" class="active"><%= i %></a> 
+                    <% } else { %>
+                        <a href="<%= pagelink %><%= i %>"><%= i %></a> 
+                    <% } %>
+                <% } %>
+            </div>            
+            <% if (aktif < total) { %>
+                <a href="<%= pagelink %><%= aktif+1; %>">&raquo;</a>
+            <% } %>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- Pagination -->
+

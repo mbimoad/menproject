@@ -1,0 +1,50 @@
+<%- include('./templates/loading.ejs') %>
+<div id="skill-content" class="clearfix">
+    <div class="col-39">
+        <h1>PORTFOLIO</h1>
+        <h2>Welcome to my portfolio showcasing my proficiency in web development. With a solid foundation in coding, a passion for problem-solving, and a dedication to creating user-friendly digital experiences, I'm excited to highlight the skills and experiences that make me a versatile and effective web developer.</h2>
+    </div>
+</div>
+
+
+<div class="buttons">
+    <% kategori.forEach(item => { %>
+        <button class="btn-kategori" type="button" data-kategori="<%= item %>"><%= item %></button>
+    <% }) %>
+
+
+
+    <select class="select-kategori">
+        <% kategori.forEach(item => { %>
+            <option value="<%= item %>"><%= item %></option>
+        <% }) %>
+    </select>
+</div>
+
+ <!-- Swiper -->
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+    <!-- <a href="#" class="swiper-slide" style="background-image:url('./test/1.webp'); background-size: cover;">Slide 1</a> -->
+
+    <% data.forEach(item => { %>
+        <a href="<%= item.link %>" class="swiper-slide">
+            <div class="detail">
+                <i class="<%= item.classname %>" aria-hidden="true"></i>
+                <span class="title"><%= item.judul %></span>
+                <span class="category"><%= item.kategori %></span>
+                <p><%= truncatechars(item.deskripsi, 100) %></p>
+            </div>
+            <img src="/uploads/<%= item.myimg %>" style="width:100%; height: 100%;">
+        </a>
+    <% }) %>
+
+
+
+   
+    
+    
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+

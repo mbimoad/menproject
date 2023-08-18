@@ -1,0 +1,24 @@
+<!--Banner Content-->
+<div id="skill-content" class="clearfix login">
+    <div class="col-39 login">
+        <h1>Login</h1>
+
+        <% if (typeof error != 'undefined') { %>
+            <p><%= error %></p>
+        <% } %>
+
+        <form action="/login/auth" method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="vusername" value="bimo@gmail.com" class="textbox">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="vpassword" value="bimo@gmail.com" class="textbox">
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        
+        
+    </div>
+</div>

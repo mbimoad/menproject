@@ -1,0 +1,12 @@
+  <!--Banner Content-->
+  <div id="skill-content" class="clearfix login">
+    <div class="col-39">
+        <h1><%= title %></h1>
+        <a class="add" href="<%= kembali %>">Kembali</a>
+        <form action="<%= action %>" method="<%= method %>" <%- (typeof is_meta) == 'undefined' ? '' : is_meta %> >
+            <%- element %>
+            <button type="submit">KIRIM</button>
+        </form>
+    </div>
+</div>
+
