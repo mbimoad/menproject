@@ -51,4 +51,4 @@ app.use('/experience', experienceroute)
 app.use('/login', authroute)
 app.use('/admin', adminroute)
 
-app.listen(port, () => console.log(`Listening On Port ${port}`));
+app.listen(port, () => console.log(`Dengarkan di Port ${port}`));
