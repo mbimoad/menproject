@@ -17,10 +17,11 @@ router.get('/', (req,res) => {
 router.post('/auth', [
     body('vusername').isEmail(),
 ], async (req,res) => {
-    console.log(req.body);
+    console.log('========================');
     data = await tbluser.findOne({vusername: req.body.vusername}); 
     console.log(data);
-    throw new Error("stop"); 
+    console.log('========================');
+    
     if(req.body.vpassword === data.vpassword) {
         res.cookie('login', 'mbimoad', {maxAge: 1000 })
         res.redirect('/admin');
