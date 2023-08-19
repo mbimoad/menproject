@@ -1,6 +1,9 @@
+require('dotenv').config();
 // npm i mongoose@5.12.13 
+
+
 const mongoose = require('mongoose'); 
-mongoose.connect('mongodb+srv://mbimoad:bimo1940@cluster0.6n0tyre.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true, 
     useUnifiedTopology: true, 
     useCreateIndex: true,
