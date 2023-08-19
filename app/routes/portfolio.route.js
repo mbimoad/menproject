@@ -35,7 +35,6 @@ router.get('/fetch/:kategori', async (req, res) => {
 
 
 router.get('/data', async (req,res) => {
-    // Get Column Name of database 
     const kolom = Object.keys(tblportfolio.schema.paths)
     kolom.pop()
     kolom.pop()
