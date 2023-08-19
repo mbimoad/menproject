@@ -51,4 +51,4 @@ app.use('/experience', experienceroute)
 app.use('/login', authroute)
 app.use('/admin', adminroute)
 
-app.listen(port, () => console.log(`Suara di Port ${port}`));
+app.listen(port, () => console.log(`Suara ada di Port ${port}`));
