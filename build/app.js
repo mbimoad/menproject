@@ -1,4 +1,4 @@
-const layouts = require('express-ejs-layouts')
+const layouts = require('express-ejs-layouts') //
 const express = require('express'); 
 const app     = express(); 
 const port    = process.env.PORT || 3000; 
