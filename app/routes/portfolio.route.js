@@ -24,7 +24,7 @@ router.get('/', async (req,res) => {
         data: await tblportfolio.find({}),
         truncatechars: truncateString,
     }
-    res.render('Portfolio', context); 
+    res.render('portfolio', context); 
 });
 
 router.get('/fetch/:kategori', async (req, res) => {
