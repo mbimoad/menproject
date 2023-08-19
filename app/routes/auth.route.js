@@ -19,6 +19,8 @@ router.post('/auth', [
 ], async (req,res) => {
     console.log(req.body);
     data = await tbluser.findOne({vusername: req.body.vusername}); 
+    console.log(data);
+    throw new Error("stop"); 
     if(req.body.vpassword === data.vpassword) {
         res.cookie('login', 'mbimoad', {maxAge: 1000 })
         res.redirect('/admin');
