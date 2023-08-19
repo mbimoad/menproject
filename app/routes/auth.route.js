@@ -17,6 +17,7 @@ router.get('/', (req,res) => {
 router.post('/auth', [
     body('vusername').isEmail(),
 ], async (req,res) => {
+    console.log(req.body);
     data = await tbluser.findOne({vusername: req.body.vusername}); 
     if(req.body.vpassword === data.vpassword) {
         res.cookie('login', 'mbimoad', {maxAge: 1000 })
